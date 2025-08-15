@@ -12,8 +12,8 @@ vim.keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decr
 
 -- mini.pick
 vim.keymap.set("n", "fb", "<cmd>Pick buffers<cr>", { desc = "Search open files" })
-vim.keymap.set("n", "ff", "<cmd>Pick files<cr>", { desc = "Search all files" })
-vim.keymap.set("n", "fw", "<cmd>Pick grep_live<cr>", { desc = "Grep all files" })
+vim.keymap.set("n", "ff", "<cmd>Pick files tool='git'<cr>", { desc = "Search all files" })
+vim.keymap.set("n", "fw", "<cmd>Pick grep_live tool='git'<cr>", { desc = "Grep all files" })
 vim.keymap.set("n", "fh", "<cmd>Pick help<cr>", { desc = "Search help tags" })
 vim.keymap.set("n", "fs", "<cmd>Pick spellsuggest<cr>", { desc = "Search help tags" })
 vim.keymap.set("n", "fc", "<cmd>Pick colorschemes<cr>", { desc = "Search help tags" })
@@ -27,7 +27,6 @@ vim.keymap.set(
 )
 
 -- lf
---
 vim.keymap.set("n", "-", "<cmd>Lf<cr>", { desc = "Lf", silent = true })
 
 -- lazygit
