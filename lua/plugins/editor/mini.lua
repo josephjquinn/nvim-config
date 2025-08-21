@@ -25,6 +25,12 @@ return {
 				mappings = {
 					start_jumping = "gw",
 				},
+
+				view = {
+					dim = true,
+
+					n_steps_ahead = 0,
+				},
 			})
 		end,
 	},
@@ -46,7 +52,6 @@ return {
 	{
 		"echasnovski/mini.clue",
 		config = function()
-			-- mini.clue setup
 			require("mini.clue").setup({
 				triggers = {
 					-- Leader key
@@ -89,17 +94,21 @@ return {
 				},
 			})
 		end,
-		{
-			"echasnovski/mini.pick",
-			config = function()
-				require("mini.pick").setup({
-					window = {
-						width = 0.8,
-						height = 0.8,
-						border = "rounded",
-					},
-				})
-			end,
+	},
+	{
+		"echasnovski/mini.pick",
+		dependencies = {
+			"echasnovski/mini.icons",
 		},
+		config = function()
+			require("mini.icons").setup({})
+			require("mini.pick").setup({
+				window = {
+					width = 0.8,
+					height = 0.8,
+					border = "rounded",
+				},
+			})
+		end,
 	},
 }
