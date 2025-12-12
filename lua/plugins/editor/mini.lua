@@ -80,6 +80,7 @@ return {
 					{ mode = "n", keys = "s" },
 					{ mode = "n", keys = "g" },
 					{ mode = "n", keys = "c" },
+					{ mode = "n", keys = "l" },
 				},
 				clues = {
 					require("mini.clue").gen_clues.builtin_completion(),
