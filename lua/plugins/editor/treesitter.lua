@@ -11,7 +11,7 @@ return {
 
 			treesitter.setup({
 				highlight = {
-					enable = true,
+					enable = false,
 				},
 				indent = { enable = true },
 				-- enable autotagging (w/ nvim-ts-autotag plugin)
@@ -33,6 +33,7 @@ return {
 					"vim",
 					"gitignore",
 					"cpp",
+          "latex",
 				},
 				sync_install = false,
 				incremental_selection = {
