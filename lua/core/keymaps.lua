@@ -22,7 +22,7 @@ vim.keymap.set("n", "fc", "<cmd>Pick colorschemes<cr>", { desc = "Search help ta
 vim.keymap.set(
 	"n",
 	"<leader><leader>",
-	"<cmd>ToggleTerm direction=horizontal<CR>",
+	"<cmd>ToggleTerm direction=float<CR>",
 	{ desc = "Toggle horizontal terminal", silent = true }
 )
 
