@@ -97,7 +97,7 @@ return {
 		end,
 	},
 	{
-		"echasnovski/mini.pick",
+"josephjquinn/mini.pick",
 		dependencies = {
 			"echasnovski/mini.icons",
 		},
