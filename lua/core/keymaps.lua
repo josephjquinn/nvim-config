@@ -56,3 +56,6 @@ vim.keymap.set("n", "-", function()
 		position = "float",
 	})
 end, { desc = "Toggle Explorer Float" })
+
+-- transparency
+vim.keymap.set("n", "<leader>-", "<cmd>TransparentToggle<cr>")
