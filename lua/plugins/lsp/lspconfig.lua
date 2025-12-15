@@ -9,8 +9,7 @@ return {
     --   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     -- end
     --
-    local lspconfig = require("lspconfig")
-    lspconfig.lua_ls.setup({
+    vim.lsp.config("lua_ls", {
       settings = {
         Lua = {
           diagnostics = { globals = { "vim", "require" } },
