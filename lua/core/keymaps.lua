@@ -11,12 +11,18 @@ vim.keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- incr
 vim.keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
 
 -- mini.pick
-vim.keymap.set("n", "fb", "<cmd>Pick buffers<cr>", { desc = "Search open files" })
-vim.keymap.set("n", "ff", "<cmd>Pick files tool='git'<cr>", { desc = "Search all files" })
-vim.keymap.set("n", "fw", "<cmd>Pick grep_live tool='git'<cr>", { desc = "Grep all files" })
+vim.keymap.set("n", "fb", "<cmd>Pick buffers<cr>", { desc = "Search open buffers" })
+vim.keymap.set("n", "ff", "<cmd>Pick files tool='rg'<cr>", { desc = "Search all files" })
+
+vim.keymap.set("n", "fe", "<cmd>Pick files_all<cr>", {
+	desc = "Pick all files (incl hidden)",
+})
+vim.keymap.set("n", "fw", "<cmd>Pick grep_live tool='rg'<cr>", { desc = "Grep all files" })
 vim.keymap.set("n", "fh", "<cmd>Pick help<cr>", { desc = "Search help tags" })
-vim.keymap.set("n", "fs", "<cmd>Pick spellsuggest<cr>", { desc = "Search help tags" })
-vim.keymap.set("n", "fc", "<cmd>Pick colorschemes<cr>", { desc = "Search help tags" })
+vim.keymap.set("n", "fs", "<cmd>Pick spellsuggest<cr>", { desc = "Search spellcheck" })
+vim.keymap.set("n", "fc", "<cmd>Pick colorschemes<cr>", { desc = "Search colorschemds" })
+vim.keymap.set("n", "fd", "<cmd>Pick diagnostic<cr>", { desc = "Search diagnostics" })
+vim.keymap.set("n", "fh", "<cmd>Pick git_hunks<cr>", { desc = "Search git changes" })
 
 -- terminal
 vim.keymap.set(
