@@ -59,3 +59,9 @@ end, { desc = "Toggle Explorer Float" })
 
 -- transparency
 vim.keymap.set("n", "<leader>-", "<cmd>TransparentToggle<cr>")
+
+-- leetcode
+vim.keymap.set("n", "<leader>lr", "<cmd>Leet run<cr>", { desc = "Run Leetcode" })
+vim.keymap.set("n", "<leader>lx", "<cmd>Leet submit<cr>", { desc = "Submit Leetcode" })
+vim.keymap.set("n", "<leader>lq", "<cmd>Leet list<cr>", { desc = "View Question List" })
+vim.keymap.set("n", "<leader>le", "<cmd>Leet desc<cr>", { desc = "Toggle desc" })
