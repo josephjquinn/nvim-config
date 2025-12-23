@@ -9,7 +9,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		local opts = { buffer = ev.buf, silent = true }
 		vim.keymap.set(
 			"n",
-			"cm",
+			"ci",
 			"<cmd>Pick lsp scope='references'<CR>",
 			vim.tbl_extend("force", opts, { desc = "Show LSP references" })
 		)
@@ -27,21 +27,27 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			vim.tbl_extend("force", opts, { desc = "Show LSP Definitions" })
 		)
 
-		vim.keymap.set(
-			"n",
-			"ci",
-			"<cmd>Pick lsp scope='implemenation'<CR>",
-			vim.tbl_extend("force", opts, { desc = "Show LSP implementations" })
-		)
+		-- vim.keymap.set(
+		-- 	"n",
+		-- 	"ci",
+		-- 	"<cmd>Pick lsp scope='implementation'<CR>",
+		-- 	vim.tbl_extend("force", opts, { desc = "Show LSP implementations" })
+		-- )
+
+		vim.keymap.set("n", "ct", "<cmd>Pick lsp scope='type_definition'<CR>", vim.tbl_extend(
+			"force",
+			opts,
+			{ desc = "Show LSP type definitions" }
+		))
 
 		vim.keymap.set(
 			{ "n", "v" },
-			"<leader>ca",
+			"ca",
 			vim.lsp.buf.code_action,
 			vim.tbl_extend("force", opts, { desc = "See available code actions" })
 		)
 
-		vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, vim.tbl_extend("force", opts, { desc = "Smart rename" }))
+		vim.keymap.set("n", "cr", vim.lsp.buf.rename, vim.tbl_extend("force", opts, { desc = "Smart rename" }))
 
 		vim.keymap.set(
 			"n",
@@ -95,4 +101,3 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 		require("lint").try_lint("cspell")
 	end,
 })
-
