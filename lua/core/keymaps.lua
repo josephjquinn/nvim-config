@@ -10,7 +10,7 @@ vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode", sile
 vim.keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
 vim.keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
 
--- pickers (mini) 
+-- pickers (mini)
 vim.keymap.set("n", "fb", "<cmd>Pick buffers<cr>", { desc = "Search open buffers" })
 vim.keymap.set("n", "ff", "<cmd>Pick files tool='rg'<cr>", { desc = "Search all files" })
 
@@ -70,3 +70,7 @@ vim.keymap.set("n", "<leader>lr", "<cmd>Leet run<cr>", { desc = "Run Leetcode" }
 vim.keymap.set("n", "<leader>lx", "<cmd>Leet submit<cr>", { desc = "Submit Leetcode" })
 vim.keymap.set("n", "<leader>lq", "<cmd>Leet list<cr>", { desc = "View Question List" })
 vim.keymap.set("n", "<leader>le", "<cmd>Leet desc<cr>", { desc = "Toggle desc" })
+
+-- git signs
+vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {desc = "Preview hunk"})
+vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", {desc = "Toggle line blame"})
