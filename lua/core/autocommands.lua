@@ -7,12 +7,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(ev)
 		MiniExtra = require("mini.extra")
 		local opts = { buffer = ev.buf, silent = true }
-		vim.keymap.set(
-			"n",
-			"ci",
-			"<cmd>Pick lsp scope='references'<CR>",
-			vim.tbl_extend("force", opts, { desc = "Show LSP references" })
-		)
+      vim.keymap.set(
+        "n",
+        "ci",
+        "<cmd>Pick lsp scope='references'<CR>",
+        vim.tbl_extend("force", opts, { desc = "Show LSP references" })
+      )
 		vim.keymap.set(
 			"n",
 			"<leader>gD",
