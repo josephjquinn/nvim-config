@@ -1,0 +1,48 @@
+# general settings
+set -g mouse on
+set -sg escape-time 10
+set -g base-index 1          
+# set -ga terminal-overrides ",screen*:Ss=^[[%p1%d q:Se=^[[2 q"
+# set -ga terminal-overrides ',*:Ss=\E[%p1%d q:Se=\E[6 q'
+
+# colors
+set -g default-terminal "tmux-256color"
+set -ag terminal-overrides ",xterm-256color:RGB"
+
+# keymaps
+unbind C-b
+set -g prefix C-a
+
+unbind %
+bind | split-window -h -c "#{pane_current_path}"
+
+unbind '"'
+bind - split-window -v -c "#{pane_current_path}"
+
+unbind r
+bind r source-file ~/.config/tmux/tmux.conf
+
+bind -r j resize-pane -D 5
+bind -r k resize-pane -U 5
+bind -r l resize-pane -R 5
+bind -r h resize-pane -L 5
+bind -r m resize-pane -Z
+
+
+
+# plugin manager 
+set -g @plugin 'tmux-plugins/tpm'
+
+# plugins 
+set -g @plugin 'christoomey/vim-tmux-navigator'
+set -g @plugin 'vaaleyard/tmux-dotbar'
+
+# dotbar
+set -g @tmux-dotbar-bg "default"
+set -g @tmux-dotbar-right true
+
+run '~/.tmux/plugins/tpm/tpm'
+
+# transparencyn
+set -g status-style fg=default,bg=default 
+
