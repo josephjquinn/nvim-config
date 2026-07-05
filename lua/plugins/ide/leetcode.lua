@@ -8,7 +8,7 @@ return {
 		},
 		opts = {
 			arg = "lc",
-			lang = "python",
+			lang = "python3",
 			storage = {
 				home = "/home/jquinn/repos/lc-practice",
 				cache = "/home/jquinn/repos/lc-practice/.cache",
