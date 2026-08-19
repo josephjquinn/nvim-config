@@ -4,9 +4,6 @@ return {
 	},
 	{
 		"Mofiqul/dracula.nvim",
-		config = function()
-			vim.cmd([[colorscheme dracula-soft]])
-		end,
 	},
 	{
 		"folke/tokyonight.nvim",
@@ -24,8 +21,11 @@ return {
 	},
 	{
 		"rebelot/kanagawa.nvim",
-		-- config = function()
-		-- 	vim.cmd([[colorscheme kanagawa-dragon]])
-		-- end,
+		config = function()
+			vim.cmd([[colorscheme dracula]])
+		end,
+	},
+	{
+		"wnkz/monoglow.nvim",
 	},
 }

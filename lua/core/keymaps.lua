@@ -1,4 +1,3 @@
---setup
 vim.g.mapleader = " "
 
 -- general
@@ -42,6 +41,7 @@ vim.keymap.set("n", "<leader>ls", "<cmd>set spell!<cr>", { desc = "Toggle spell 
 
 -- vimtex
 vim.keymap.set("n", "<leader>lc", "<cmd>VimtexCompile<cr>", { desc = "Compile Latex" })
+vim.keymap.set("n", "<leader>lv", "<cmd>VimtexView<cr>", { desc = "Latex Forward Search" })
 
 -- NeoTree
 -- keymap.set("n", "<leader>e", "<cmd>Neotree toggle position=left<cr>", { desc = "Toggle Explorer Left " })
