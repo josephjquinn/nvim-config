@@ -9,4 +9,24 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
-return {}
+return {
+	"lewis6991/ts-install.nvim",
+	lazy = false,
+	config = function()
+		require("ts-install").setup({
+			auto_update = false,
+			ensure_install = {
+				"lua",
+				"python",
+				"javascript",
+				"typescript",
+				"tsx",
+				"css",
+				"c",
+				"cpp",
+				"rust",
+				"bash",
+			},
+		})
+	end,
+}
