@@ -10,8 +10,8 @@ return {
 			arg = "lc",
 			lang = "python3",
 			storage = {
-				home = "/home/jquinn/repos/lc-practice",
-				cache = "/home/jquinn/repos/lc-practice/.cache",
+				home = "/Users/josephquinn/repos/lc-practice",
+				cache = "/Users/josephquinn/repos/lc-practice/.cache",
 			},
 		},
 	},
